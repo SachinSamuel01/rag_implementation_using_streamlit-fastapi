@@ -34,6 +34,8 @@ async def get_collections():
     
     collections = []
     for folder_name in os.listdir(BASE_DIR):
+        if folder_name==r"dummy.txt":
+            continue
         collections.append({"name": folder_name})
 
     return collections
