@@ -56,7 +56,7 @@ def query_page():
         if response.status_code == 200:
             response_text = response.json().get("response", "No response from backend")
             st.session_state['query_responses'].append((query, response_text))
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("Failed to get response from backend")
 

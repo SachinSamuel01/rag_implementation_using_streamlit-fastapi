@@ -20,8 +20,11 @@ def rele_data(dir):
 
 
 def get_content(retriever,query):
-    docs=retriever.get_relevant_documents(query)
+    # docs=retriever.get_relevant_documents(query)
+    docs=retriever.invoke(query)
     
-    content= f'{str(docs[0])}\n{str(docs[1])}\n{str(docs[2])}\n{str(docs[3])}'
+    content= f'{str(docs[0].page_content)}\n{str(docs[1].page_content)}\n{str(docs[2].page_content)}\n{str(docs[3].page_content)}'
+
+    # print(docs[0])
     
     return content

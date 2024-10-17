@@ -4,5 +4,7 @@ langchain
 langchain-community
 fastapi
 chromadb
-dotenv
+python-dotenv
 langchain-google-genai
+python-multipart
+pypdf

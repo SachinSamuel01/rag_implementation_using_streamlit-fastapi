@@ -58,7 +58,7 @@ async def process_query(request: dict):
     collection = request.get("collection")
     query = request.get("query")
     
-    print(counter)
+    
     content=get_content(vector_retriever,query)
 
     response= get_response(query,content,'NONE')
