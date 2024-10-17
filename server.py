@@ -42,7 +42,7 @@ async def get_collections():
 async def deploy_collection(name: str):
     global vector_retriever
     
-    vector_retriever= rele_data(f'{BASE_DIR}\\{name}')
+    vector_retriever= rele_data(f'{BASE_DIR}/{name}')
     collection_dir = os.path.join(BASE_DIR, name)
     if not os.path.exists(collection_dir):
         raise HTTPException(status_code=404, detail="Collection not found")

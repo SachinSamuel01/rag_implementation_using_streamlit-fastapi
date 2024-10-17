@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 
 BASE_URL = "http://127.0.0.1:8000"
+BASE_URL="https://rag-implementation-using-streamlit.onrender.com"
 
 def main():
     st.title("PDF Collection Manager")
